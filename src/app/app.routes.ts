@@ -5,6 +5,7 @@ import { DatabindingComponent } from './components/databinding/databinding.compo
 import { ServicesComponent } from './components/services/services.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { HomeComponent } from './components/home/home.component';
+import { IoexampleComponent } from './components/ioexample/ioexample.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path: 'pipes',
         component: PipesComponent
+    },
+    {
+        path: 'ioexample',
+        component: IoexampleComponent
     }
 ];

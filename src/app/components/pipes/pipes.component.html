@@ -1,1 +1,22 @@
-<p>pipes works!</p>
+<h3>Pipes</h3>
+
+<p>{{name | lowercase}}</p>
+<p>{{name | uppercase}}</p>
+
+<p>{{"I am learning angular pipes" | titlecase}}</p>
+
+<p>{{name | slice:0:9 | uppercase}}</p> <!-- We can use multiple pipes together -->
+
+<p>{{student | json}}</p>
+
+<p>{{today}}</p>
+<p>{{today | date}}</p>
+<p>{{today | date:'short'}}</p>
+<p>{{today | date:'medium'}}</p>
+<p>{{today | date:'long'}}</p>
+<p>{{today | date:'full'}}</p>
+<p>{{today | date:'shortTime'}}</p>
+
+<p>Marks : {{marks}} - Grade : {{marks | grade}}</p>
+
+<p>{{"Sanika" | total:19:19:15:20:17}}</p>
