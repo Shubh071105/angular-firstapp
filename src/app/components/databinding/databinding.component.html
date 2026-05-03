@@ -1,0 +1,28 @@
+<p>databinding works!</p>
+
+<ul>
+    <li>One-way data binding</li>
+        <ol>
+            <li>Interpolation</li>
+                <p>I am learning {{ course }}</p>
+
+            <li>Event binding</li>
+                <button class="btn btn-primary m-2" (click)="onButtonClick()">Click Me</button>
+                <button class="btn btn-secondary m-2" (dblclick)="onbuttondoubleclick()">Double Click Me</button>
+
+            <li>Property binding</li>
+                <input type="text" [value]="course">
+                <img src="" [alt]="course">
+                
+            <li>Style binding</li>
+                <p [style.color]="fontcolor">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <button class="btn btn-info m-2" (click)="changeFontColor('green')">Green</button>
+                <button class="btn btn-info m-2" (click)="changeFontColor('blue')">Blue</button>
+                <button class="btn btn-info m-2" (click)="changeFontColor('red')">Red</button>
+        </ol>
+
+    <li>Two-way data binding</li>
+        <ol>
+            <li>ngModel</li>
+        </ol>
+</ul>
