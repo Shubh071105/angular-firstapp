@@ -6,6 +6,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { HomeComponent } from './components/home/home.component';
 import { IoexampleComponent } from './components/ioexample/ioexample.component';
+import { DirectiveComponent } from './components/directive/directive.component';
 
 export const routes: Routes = [
     {
@@ -35,5 +36,9 @@ export const routes: Routes = [
     {
         path: 'ioexample',
         component: IoexampleComponent
+    },
+    {
+        path: 'directives-eg',
+        component: DirectiveComponent
     }
 ];

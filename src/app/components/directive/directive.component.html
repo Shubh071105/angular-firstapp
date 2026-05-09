@@ -1,0 +1,60 @@
+<h2>Directives are the classes that add additional behavior to elements in your Angular applications</h2>
+
+<ul>
+    <li>Component</li>
+    <li>Attribute Directive (NgClass and NgStyle)</li>
+    <hr>
+    <h3>NgClass :</h3>
+
+    <p [ngClass]="['bg-warning','text-center','m-3','p-3']">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+    <h3 [ngClass]="classList">Hello</h3>
+    <button class="btn btn-primary m-2" (click)="addClass('bg-success')">Add bg-colour</button>
+    <button class="btn btn-primary m-2" (click)="addClass('m-5')">Add margin</button>
+    <button class="btn btn-primary m-2" (click)="addClass('p-3')">Add padding</button>
+    <button class="btn btn-primary m-2" (click)="addClass('text-light')">Add text color</button>
+    <button class="btn btn-primary m-2" (click)="addClass('text-center')">Add text alignment</button>
+    <button class="btn btn-primary m-2" (click)="removeLastClass()">Undo Changes</button>
+
+    <hr>
+    <p [ngClass]="{'bg-warning':false, 'bg-danger':true}">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+
+    <div class="card mb-3" style="max-width: 18rem;" [ngClass]="{'text-white':theme, 'bg-dark':theme, 'text-dark':!theme, 'bg-light':!theme}">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <h5 class="card-title">Dark card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <button class="btn btn-primary m-3" (click)="changeTheme()">Change Theme</button>
+    </div>
+
+    <li>Structural Directive (NgIf, NgFor)</li>    
+    <hr>
+    <h3>NgIf :</h3>
+
+    <ng-container *ngIf="loggedIn; then ifBlock else elseBlock">Lorem ipsum dolor, sit amet consectetur adipisicing.</ng-container>
+    <ng-template #ifBlock>
+        <p>You are logged <i><b>in</b></i>.</p>
+    </ng-template>
+    <ng-template #elseBlock>
+        <p>You are logged <i><b>out</b></i>.</p>
+    </ng-template>
+    <button class="btn btn-primary m-3" (click)="changeLogin()">Login/Logout</button>
+
+    <hr>
+    <h3>NgFor :</h3>
+    <ul>
+        <li *ngFor="let i of students">{{ i }}</li>
+    </ul>
+
+    <hr>
+    <div class="row">
+        <div class="col" *ngFor="let p of products">
+            <ng-container *ngIf="p.outofstock">
+            <p>Id: {{ p.id }}</p>
+            <p>Name: {{ p.name }}</p>
+            <p>Price: {{ p.price }}</p>
+            </ng-container>
+        </div>
+    </div>
+</ul>
