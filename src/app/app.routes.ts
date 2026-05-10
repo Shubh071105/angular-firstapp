@@ -2,11 +2,11 @@ import { Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
-import { ServicesComponent } from './components/services/services.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { HomeComponent } from './components/home/home.component';
 import { IoexampleComponent } from './components/ioexample/ioexample.component';
 import { DirectiveComponent } from './components/directive/directive.component';
+import { ServiceExampleComponent } from './components/service-example/service-example.component';
 
 export const routes: Routes = [
     {
@@ -27,7 +27,7 @@ export const routes: Routes = [
     },
     {
         path: 'services',
-        component: ServicesComponent
+        component: ServiceExampleComponent
     },
     {
         path: 'pipes',

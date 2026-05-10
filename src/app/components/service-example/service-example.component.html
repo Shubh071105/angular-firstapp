@@ -1,0 +1,14 @@
+<p>service-example works!</p>
+
+<div class="container bg-success text-white p-3 m-2" *ngFor="let p of products">
+    <p>Id : {{p.id}}</p>
+    <p>Name : {{p.name}}</p>
+    <p>Price : {{p.price}}</p>
+</div>
+
+<button class="btn btn-secondary m-3 p-2" (click)="getProducts()">Show All Products</button>
+<button class="btn btn-secondary m-3 p-2" (click)="getProductsGreaterThanPrice(20000)">Show Products Greater Than 20000</button>
+<hr>
+<button class="btn btn-secondary m-3 p-2" *ngFor="let p of products" (click)="getProductsByName(p.name)">Show {{p.name}}</button>
+
+<h4>{{user.name}}</h4>
